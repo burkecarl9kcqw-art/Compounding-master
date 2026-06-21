@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compounding Master</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* glowing background light */
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:radial-gradient(circle, rgba(0,255,100,0.2), transparent 60%);
+top:-100px;
+left:-100px;
+filter:blur(40px);
+animation:moveLight 6s infinite alternate;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:radial-gradient(circle, rgba(255,0,0,0.15), transparent 60%);
+bottom:-100px;
+right:-100px;
+filter:blur(40px);
+animation:moveLight2 6s infinite alternate;
+}
+
+@keyframes moveLight{
+from{transform:translate(0,0);}
+to{transform:translate(80px,80px);}
+}
+
+@keyframes moveLight2{
+from{transform:translate(0,0);}
+to{transform:translate(-80px,-80px);}
+}
+
+/* bubbles */
+.bubble{
+position:absolute;
+bottom:-100px;
+width:15px;
+height:15px;
+border-radius:50%;
+background:rgba(0,255,120,0.25);
+animation:rise 10s infinite linear;
+}
+
+.bubble:nth-child(odd){
+background:rgba(255,0,0,0.25);
+}
+
+@keyframes rise{
+0%{transform:translateY(0) scale(1);}
+100%{transform:translateY(-1200px) scale(0.3);}
+}
+
+/* container */
+.container{
+position:relative;
+z-index:10;
+text-align:center;
+padding:20px;
+}
+
+/* glass card */
+.card{
+background:rgba(255,255,255,0.07);
+backdrop-filter: blur(12px);
+border-radius:20px;
+padding:20px;
+margin:20px auto;
+max-width:520px;
+box-shadow:0 0 25px rgba(0,255,100,0.15);
+border:1px solid rgba(255,255,255,0.1);
+}
+
+/* logo */
+.logo{
+width:90px;
+height:90px;
+border-radius:50%;
+border:2px solid white;
+object-fit:cover;
+margin-bottom:10px;
+}
+
+/* buttons */
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:linear-gradient(45deg,#00ff88,#ff004c);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:0.3s;
+box-shadow:0 0 15px rgba(0,255,100,0.4);
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px rgba(255,0,0,0.5);
+}
+
+/* images */
+.img-box{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-top:15px;
+}
+
+.img-box img{
+width:100%;
+height:120px;
+border-radius:12px;
+object-fit:cover;
+border:2px solid rgba(255,255,255,0.2);
+}
+
+/* text */
+h1{
+margin:10px 0;
+}
+
+.quote{
+font-size:14px;
+opacity:0.85;
+margin:8px 0;
+line-height:1.4;
+}
+
+.highlight{
+color:#00ff88;
+font-weight:bold;
+}
+
+/* top & bottom fixed button */
+.fixed-top, .fixed-bottom{
+position:fixed;
+left:50%;
+transform:translateX(-50%);
+z-index:999;
+}
+
+.fixed-top{
+top:10px;
+}
+
+.fixed-bottom{
+bottom:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- bubbles -->
+<script>
+for(let i=0;i<25;i++){
+let b=document.createElement("div");
+b.className="bubble";
+b.style.left=Math.random()*100+"vw";
+b.style.animationDuration=(5+Math.random()*10)+"s";
+document.body.appendChild(b);
+}
+</script>
+
+<!-- TOP BUTTON -->
+<div class="fixed-top">
+<a class="btn" href="https://t.me/+MJBllk32SAY1MzY1" target="_blank">
+🚀 Join Telegram
+</a>
+</div>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="card">
+<img class="logo" src="content://media/external/downloads/1000082842">
+
+<h1>Compounding Master</h1>
+
+<p class="quote">
+“Discipline is the bridge between goals and success in trading.”
+</p>
+
+<p class="quote">
+📈 Smart Trading | 💰 Compounding Growth | 🔥 Risk Management System
+</p>
+
+<p class="quote highlight">
+“Profit is not luck, it is strategy + patience.”
+</p>
+
+<a class="btn" href="https://t.me/+MJBllk32SAY1MzY1" target="_blank">
+🔥 Join Free Community
+</a>
+</div>
+
+<!-- WHY JOIN -->
+<div class="card">
+<h2>Why Join Us?</h2>
+
+<p class="quote">✔ Daily Market Updates</p>
+<p class="quote">✔ Live Trading Signals</p>
+<p class="quote">✔ Risk Control Strategy</p>
+<p class="quote">✔ Beginner to Advanced Learning</p>
+
+<p class="quote highlight">
+“Your future profit depends on the skills you build today.”
+</p>
+</div>
+
+<!-- GALLERY -->
+<div class="card">
+<h2>Our Compunding</h2>
+
+<div class="img-box">
+<img src="content://media/external/downloads/1000082840">
+<img src="content://media/external/downloads/1000082843">
+<img src="content://media/external/downloads/1000082844">
+<img src="content://media/external/downloads/1000082845">
+</div>
+</div>
+
+</div>
+
+<!-- BOTTOM BUTTON -->
+<div class="fixed-bottom">
+<a class="btn" href="https://t.me/+MJBllk32SAY1MzY1" target="_blank">
+🚀 Join Now
+</a>
+</div>
+
+</body>
+</html>
